@@ -11,8 +11,7 @@ int main()
     const double SUGAR_PER_BATCH = 1.5;
     const double BUTTER_PER_BATCH = 1.0;
     const double FLOUR_PER_BATCH = 2.75;
-
-    // User input
+    
     int desiredCookies;
     cout << "Cookie Recipe Adjuster\n";
     cout << "This program calculates the amount of ingredients needed\n";
@@ -21,15 +20,11 @@ int main()
     cout << "How many cookies would you like to make? ";
     cin >> desiredCookies;
 
-    // Calculate multiplier
     double multiplier = static_cast<double>(desiredCookies) / BASE_COOKIES;
-
-    // Calculate ingredient amounts
     double sugarNeeded = SUGAR_PER_BATCH * multiplier;
     double butterNeeded = BUTTER_PER_BATCH * multiplier;
     double flourNeeded = FLOUR_PER_BATCH * multiplier;
 
-    // Display results
     cout << "\nIngredient amounts needed:\n";
     cout << "---------------------------------\n";
     cout << "Sugar:  " << sugarNeeded  << " cups\n";
